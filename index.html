@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#111111">
+  <title>BASIT HUNT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">BASIT HUNT</div>
+        <div class="owner">by Mohammed Shaibu</div>
+      </div>
+      <button id="premiumTop" class="small-btn">🔓 PREMIUM</button>
+    </header>
+
+    <main>
+      <section id="home" class="screen active">
+        <div class="hero">
+          <div class="logo">🎯</div>
+          <h1>BASIT HUNT</h1>
+          <p>Hunt the targets. Beat your score. Become the champion.</p>
+          <button id="startBtn" class="main-btn">▶ START HUNT</button>
+          <button id="premiumBtn" class="secondary-btn">⭐ UNLOCK PREMIUM — GHS 5</button>
+        </div>
+
+        <div class="cards">
+          <div class="card"><b>🏆</b><span>High Score<br><strong id="homeHigh">0</strong></span></div>
+          <div class="card"><b>🪙</b><span>Coins<br><strong id="homeCoins">0</strong></span></div>
+          <div class="card"><b>🔓</b><span>Mode<br><strong id="homeMode">FREE</strong></span></div>
+        </div>
+
+        <div class="info">
+          <h3>How to play</h3>
+          <p>Tap the moving targets before time runs out. Gold targets give more points. Avoid bombs.</p>
+        </div>
+      </section>
+
+      <section id="game" class="screen">
+        <div class="hud">
+          <div>❤️ <span id="lives">3</span></div>
+          <div>⭐ <span id="score">0</span></div>
+          <div>⏱️ <span id="time">30</span></div>
+          <div>🪙 <span id="coins">0</span></div>
+        </div>
+        <div id="gameArea">
+          <div id="target" class="target">🎯</div>
+          <div id="bomb" class="bomb">💣</div>
+          <div id="message"></div>
+        </div>
+        <button id="quitBtn" class="quit-btn">QUIT</button>
+      </section>
+
+      <section id="result" class="screen">
+        <div class="result-box">
+          <div class="trophy">🏆</div>
+          <h2>HUNT COMPLETE</h2>
+          <p>Your score</p>
+          <div id="finalScore" class="big-score">0</div>
+          <p id="newRecord"></p>
+          <button id="againBtn" class="main-btn">↻ PLAY AGAIN</button>
+          <button id="resultPremium" class="secondary-btn">⭐ PREMIUM MODE — GHS 5</button>
+        </div>
+      </section>
+
+      <section id="payment" class="screen">
+        <div class="payment-box">
+          <div class="logo">💳</div>
+          <h2>Unlock Premium</h2>
+          <p>Get 60 seconds, extra lives and premium targets.</p>
+          <div class="price">GHS 5</div>
+          <div class="momo">
+            <div class="momo-title">MTN MoMo</div>
+            <div class="momo-number">0599035746</div>
+            <div class="momo-name">Mohammed Shaibu</div>
+          </div>
+          <ol>
+            <li>Send <b>GHS 5</b> to the MoMo number above.</li>
+            <li>Keep your transaction confirmation.</li>
+            <li>Contact Mohammed Shaibu to receive your premium unlock code.</li>
+            <li>Enter the code below after payment.</li>
+          </ol>
+          <input id="unlockCode" class="code-input" maxlength="12" placeholder="Enter unlock code">
+          <button id="unlockBtn" class="main-btn">🔓 UNLOCK PREMIUM</button>
+          <button id="backBtn" class="text-btn">← Back</button>
+          <p class="notice">For this first version, payment verification is manual. Do not enter your MoMo PIN or OTP here.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
